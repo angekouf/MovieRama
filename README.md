@@ -36,9 +36,15 @@ First let us install the dependencies by using
 
 Then build the project files by typing
 
-<code ssh> npm run build </code> 
+<code ssh> npm run build </code>
 
-and then let us start the server by typing 
+Then create the .env file by running
+
+<code ssh> cp .env.example .env </code>
+
+Open the file and enter your API Key for the Movie DB Api.
+
+Then let us start the server by typing 
 
 <code ssh> npm start </code> 
 

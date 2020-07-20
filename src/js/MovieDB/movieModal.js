@@ -101,7 +101,7 @@ export default class MovieModal {
     });
   }
 
-  static async hide(editUri = false) {
+  static async hide() {
     if (!MovieModal.#movieId || !MovieModal.#modalLoaded) return;
 
     const modal = MovieModal.#modalLoaded;
@@ -111,7 +111,7 @@ export default class MovieModal {
     await Helpers.waitForEvent(modal, 'transitionend');
     modal.remove();
 
-    MovieRama.redirectTo(null, true, MovieModal.#movieId);
+    MovieRama.redirectTo(null, true, false);
     MovieModal.#movieId = null;
   }
 
